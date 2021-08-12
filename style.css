@@ -46,3 +46,8 @@ ul {
     margin-left: 7%;
     font-size: 20px;
 }
+
+.task {
+    color: black;
+    font-family: Arial;
+}
