@@ -48,6 +48,11 @@ ul {
 }
 
 .task {
+    margin-bottom: 1%;
     color: black;
     font-family: Arial;
+    cursor: pointer;
+}
+.checked {
+    text-decoration: line-through;
 }
