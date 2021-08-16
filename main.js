@@ -42,6 +42,10 @@ const addTask = (e) => {
     ul.appendChild(task);
     input.value = ""
 }
-
+ul.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI'){
+    e.target.classList.toggle('checked');
+    }
+},false)
 
 form.addEventListener('submit', addTask)
