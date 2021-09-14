@@ -30,6 +30,9 @@ const ul = document.querySelector('ul')
 const btn = document.querySelector('.add');
 const list = document.getElementsByClassName('task');
 
+const removeTask = (e) => {
+    e.target.parentNode.remove();
+}
 
 const addTask = (e) => {
     e.preventDefault()
@@ -43,6 +46,7 @@ const addTask = (e) => {
     toDoList.push(task)
     ul.appendChild(task);
     input.value = ""
+    task.querySelector("button").addEventListener('click', removeTask);
     }
 }
 ul.addEventListener('click', function(e) {
