@@ -39,7 +39,7 @@ const addTask = (e) => {
     } else {
     const task = document.createElement('li');
     task.className = "task";
-    task.innerHTML = titleTask;
+    task.innerHTML = titleTask + `<button class="remove">x</button>`;
     toDoList.push(task)
     ul.appendChild(task);
     input.value = ""
