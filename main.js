@@ -34,13 +34,16 @@ const list = document.getElementsByClassName('task');
 const addTask = (e) => {
     e.preventDefault()
     const titleTask = input.value
-    if (titleTask === "") return;
+    if (titleTask === "") {
+        alert("Proszę wpisać składnik!");
+    } else {
     const task = document.createElement('li');
     task.className = "task";
     task.innerHTML = titleTask;
     toDoList.push(task)
     ul.appendChild(task);
     input.value = ""
+    }
 }
 ul.addEventListener('click', function(e) {
     if (e.target.tagName === 'LI'){
