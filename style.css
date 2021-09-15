@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    position: absolute;
+    overflow-x: hidden;
+
+}
 .pictures {
     width: 100vw;
     height: 40vh;
@@ -31,7 +36,7 @@ section {
 
 input {
     margin: 0 2% 2% 5%; 
-    font-size: 18px;
+    font-size: 15px;
 }
 .add {
     background-color: #4CAF50;
@@ -45,6 +50,7 @@ input {
 }
 
 ul {
+    margin-top: 10px;
     margin-left: 7%;
     font-size: 20px;
 }
@@ -57,6 +63,17 @@ ul {
 }
 .checked {
     text-decoration: line-through;
+    list-style: none;
+}
+.checked::before{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    height: 15px;
+    width: 7px;
+    left: 5px;
+    transform: rotate(45deg);
 }
 
 .remove {
