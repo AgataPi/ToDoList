@@ -63,7 +63,6 @@ ul {
 }
 .checked {
     text-decoration: line-through;
-    list-style: none;
 }
 
 .remove {
@@ -90,5 +89,8 @@ ul {
     section {
         max-width: 1200px;
         margin: auto;
+    }
+    ul {
+        column-count: 2;
     }
 }
