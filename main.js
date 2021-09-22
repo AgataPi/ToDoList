@@ -27,7 +27,7 @@ const toDoList = []
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const ul = document.querySelector('ul')
-const btn = document.querySelector('.add');
+const addBtn = document.querySelector('.add');
 const list = document.getElementsByClassName('task');
 
 const removeTask = (e) => {
@@ -55,4 +55,11 @@ ul.addEventListener('click', function(e) {
     }
 },false)
 
-form.addEventListener('submit', addTask)
+const clearBtn = document.querySelector('.clear')
+const clearTask = () => {
+    toDoList.splice(0, toDoList.length);
+    ul.innerHTML = toDoList;
+    input.value = ""
+}
+clearBtn.addEventListener('click', clearTask)
+addBtn.addEventListener('click', addTask)
