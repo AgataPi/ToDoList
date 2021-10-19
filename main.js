@@ -37,7 +37,7 @@ const removeTask = (e) => {
 const addTask = (e) => {
     e.preventDefault()
     const titleTask = input.value
-    if (titleTask === "") {
+    if (titleTask === "" || (!/\S/.test(titleTask))) {
         alert("Proszę wpisać składnik!");
     } else {
     const task = document.createElement('li');
