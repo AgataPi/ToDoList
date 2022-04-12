@@ -1,4 +1,4 @@
-// TO DO LIST ...
+// To do list
 const images = [
   {
     img: "img/food.jpg",
